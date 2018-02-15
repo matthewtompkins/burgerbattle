@@ -537,6 +537,7 @@ h3 {
 .hero {
   background-attachment: fixed;
   background-image: url("../img/hero.png");
+  background-position: bottom center;
   flex-direction: column;
   min-height: 100vh; }
   @media only screen and (max-width: 768px) {
@@ -548,6 +549,9 @@ h3 {
 
 #info {
   background-image: linear-gradient(to right, #ec2227 0%, #ffde12 100%); }
+  @media only screen and (max-width: 768px) {
+    #info h1 {
+      font-size: 2.618em; } }
 
 .eventCont {
   border: 1em solid #F9FAF9; }
