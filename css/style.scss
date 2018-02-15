@@ -12,15 +12,12 @@
 
 .topNav {
   background-color: transparent;
-  height: 100px;
   position: fixed;
-  transform-origin: right top;
-  transform: rotate(90deg) translateX(100%);
   width: 100%;
 
     a {
         &:hover {
-          color: $green;
+          color: $tertiary;
         }
     }
 }
@@ -62,7 +59,7 @@
   margin-right: 0;
 
     &:hover {
-      color: $green;
+      color: $tertiary;
     }
 }
 
@@ -82,28 +79,33 @@
 
   cursor: pointer;
   height: 30px;
-  margin-left: 40px;
-  margin-right: 50px;
-  margin-top: 35px;
-  position: relative;
   width: 30px;
 
     &::before {
       @include hamburger;
-      right: 10px;
+      transform: scaleX(1.15);
+      transform-origin: right;
+      top: 10px;
     }
 
     &::after {
       @include hamburger;
-      left: 10px;
+      bottom: 10px;
     }
 
     &:hover::before {
-      right: 5px;
+      transform: scaleX(1);
     }
 
     &:hover::after {
-      left: 5px;
+      bottom: 5px;
+    }
+}
+
+.hamBlack {
+
+    &::before, &::after {
+      background-color: $black!important;
     }
 }
 
@@ -122,12 +124,12 @@
 
 
 /*------------------------
---------HERO----------
+--------FRONT PAGE--------
 ------------------------*/
 
 .hero {
   background-attachment: fixed;
-  background-image: url("../img/hero2comp.png");
+  background-image: url("../img/hero.png");
   flex-direction: column;
   min-height: 100vh;
 
@@ -140,6 +142,52 @@
     }
 }
 
+#info {
+  background-image: linear-gradient(to right, $primary 0%, $secondary 100%);
+}
+
+.eventCont {
+  border: 1em solid $white;
+
+    &:hover {
+      border: 1em solid $black;
+
+        h1, h2, h3, p {
+          color: $black;
+        }
+
+        .imgEvent {
+          opacity: 1;
+        }
+    }
+}
+
+.imgEvent {
+  height: 100%;
+  width: 100%;
+}
+
+.imgDet {
+  background-image: url("../img/overhead.jpg");
+}
+
+.imgGR {
+  background-image: url("../img/overhead2.jpg");
+  background-position: top center;
+}
+
+.eventOpt {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.contactBtn {
+
+    &:hover {
+      color: $secondary;
+    }
+}
 
 /*------------------------
 --------TEXT CONTENT-------
@@ -162,7 +210,7 @@
 
     &::after {
 
-      @include taco;
+      @include burger;
     }
 }
 
@@ -174,26 +222,6 @@
     @include responsive(small-screen) {
       background-attachment: scroll;
     }
-}
-
-.imgMiss {
-  background-image: url("../img/mission.jpg");
-}
-
-.imgTix {
-  background-image: url("../img/shed5.jpg");
-  background-position: top center;
-}
-
-#info, #tickets {
-
-    @include responsive(small-screen) {
-      padding: 1em;
-    }
-}
-
-.flowButton {
-  margin: 0;
 }
 
 /*------------------------

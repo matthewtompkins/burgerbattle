@@ -1,30 +1,27 @@
 
 // FONTS
 
-$header: 'Fjalla One', sans-serif;
-$title: 'Fjalla One', sans-serif;
-$body: 'Abel', sans-serif;
+$header: 'Archivo Black', sans-serif;
+$body: 'Open Sans', sans-serif;
 
-$black: #5B584F;
+$black: #333331;
 $white: #F9FAF9;
-$green: #92A78C;
-$orange: #F79E6B;
-$tan: #F7CD82;
+$primary: #ec2227;
+$secondary: #ffde12;
+$tertiary: #FFAB00;
 
 @mixin hamburger {
   background-color: $white;
   content: "";
   display: block;
-  height: 30px;
+  height: 2px;
   position: absolute;
-  right: 0;
-  transform: translateY(0);
   transition: .3s ease-in-out;
-  width: 2px;
+  width: 30px;
 }
 
-@mixin taco {
-  background: url("../img/logo.png") no-repeat center;
+@mixin burger {
+  background: url("../img/burger.png") no-repeat center;
   background-size: contain;
   content: "";
   display: block;

@@ -236,21 +236,24 @@ table {
 ---------BUTTONS----------
 ------------------------*/
 .button {
-  background: #F9FAF9;
-  border: 2px solid #F9FAF9;
-  color: #5B584F;
-  font-family: "Fjalla One", sans-serif;
+  border: 5px solid #F9FAF9;
   margin: 1em;
-  padding: .25em .618em;
-  text-transform: lowercase;
+  padding: 1em;
+  text-transform: uppercase;
   transition: .3s; }
   .button:hover {
-    background: transparent;
-    color: #F9FAF9; }
+    background: #F9FAF9;
+    color: #333331; }
     @media only screen and (max-width: 768px) {
       .button:hover {
-        background: #F9FAF9;
-        color: #5B584F; } }
+        background: transparent;
+        color: #F9FAF9; } }
+
+.buttonBlack {
+  border: 5px solid #333331;
+  margin: 1em;
+  padding: 1em;
+  text-transform: uppercase; }
 
 /*------------------------
 ---------IMG/ICON---------
@@ -297,13 +300,16 @@ a {
   text-decoration: none; }
 
 h1 {
-  font-size: 4.326em; }
+  font-size: 4.326em;
+  line-height: 1em; }
 
 h2 {
-  font-size: 2.618em; }
+  font-size: 2.618em;
+  line-height: 1em; }
 
 h3 {
-  font-size: 1.618em; }
+  font-size: 1.618em;
+  line-height: 1em; }
 
 /*------------------------
 -------FONTS--------------
@@ -327,25 +333,25 @@ h3 {
   font-size: .5em; }
 
 .fontHead {
-  font-family: "Fjalla One", sans-serif; }
+  font-family: "Archivo Black", sans-serif; }
 
 .fontBody {
-  font-family: "Abel", sans-serif; }
+  font-family: "Open Sans", sans-serif; }
 
 .fontWhite {
   color: #F9FAF9; }
 
 .fontBlack {
-  color: #5B584F; }
+  color: #333331; }
 
-.fontBlue {
-  color: #92A78C; }
+.fontPri {
+  color: #ec2227; }
 
-.fontRed {
-  color: #F79E6B; }
+.fontSec {
+  color: #ffde12; }
 
-.fontTan {
-  color: #F7CD82; }
+.fontTer {
+  color: #FFAB00; }
 
 .fontUpper {
   text-transform: uppercase; }
@@ -378,16 +384,16 @@ h3 {
   background-color: #F9FAF9; }
 
 .bgBlack {
-  background-color: #5B584F; }
+  background-color: #333331; }
 
-.bgBlue {
-  background-color: #92A78C; }
+.bgPri {
+  background-color: #ec2227; }
 
-.bgRed {
-  background-color: #F79E6B; }
+.bgSec {
+  background-color: #ffde12; }
 
-.bgTan {
-  background-color: #F7CD82; }
+.bgTer {
+  background-color: #FFAB00; }
 
 /*------------------------
 ---------OPACITY----------
@@ -439,13 +445,10 @@ h3 {
 ------------------------*/
 .topNav {
   background-color: transparent;
-  height: 100px;
   position: fixed;
-  transform-origin: right top;
-  transform: rotate(90deg) translateX(100%);
   width: 100%; }
   .topNav a:hover {
-    color: #92A78C; }
+    color: #FFAB00; }
 
 .logo {
   background-image: url("../img/logo.png");
@@ -476,7 +479,7 @@ h3 {
   line-height: 1.618em;
   margin-right: 0; }
   .mOption:hover {
-    color: #92A78C; }
+    color: #FFAB00; }
 
 .mSoc {
   min-width: 200px; }
@@ -489,37 +492,34 @@ h3 {
 #hamburger {
   cursor: pointer;
   height: 30px;
-  margin-left: 40px;
-  margin-right: 50px;
-  margin-top: 35px;
-  position: relative;
   width: 30px; }
   #hamburger::before {
     background-color: #F9FAF9;
     content: "";
     display: block;
-    height: 30px;
+    height: 2px;
     position: absolute;
-    right: 0;
-    transform: translateY(0);
     transition: .3s ease-in-out;
-    width: 2px;
-    right: 10px; }
+    width: 30px;
+    transform: scaleX(1.15);
+    transform-origin: right;
+    top: 10px; }
   #hamburger::after {
     background-color: #F9FAF9;
     content: "";
     display: block;
-    height: 30px;
+    height: 2px;
     position: absolute;
-    right: 0;
-    transform: translateY(0);
     transition: .3s ease-in-out;
-    width: 2px;
-    left: 10px; }
+    width: 30px;
+    bottom: 10px; }
   #hamburger:hover::before {
-    right: 5px; }
+    transform: scaleX(1); }
   #hamburger:hover::after {
-    left: 5px; }
+    bottom: 5px; }
+
+.hamBlack::before, .hamBlack::after {
+  background-color: #333331 !important; }
 
 .navOption {
   margin-right: 60px; }
@@ -532,11 +532,11 @@ h3 {
   justify-content: space-around; }
 
 /*------------------------
---------HERO----------
+--------FRONT PAGE--------
 ------------------------*/
 .hero {
   background-attachment: fixed;
-  background-image: url("../img/hero2comp.png");
+  background-image: url("../img/hero.png");
   flex-direction: column;
   min-height: 100vh; }
   @media only screen and (max-width: 768px) {
@@ -545,6 +545,37 @@ h3 {
   @media only screen and (max-height: 576px) and (orientation: landscape) {
     .hero {
       background-attachment: scroll; } }
+
+#info {
+  background-image: linear-gradient(to right, #ec2227 0%, #ffde12 100%); }
+
+.eventCont {
+  border: 1em solid #F9FAF9; }
+  .eventCont:hover {
+    border: 1em solid #333331; }
+    .eventCont:hover h1, .eventCont:hover h2, .eventCont:hover h3, .eventCont:hover p {
+      color: #333331; }
+    .eventCont:hover .imgEvent {
+      opacity: 1; }
+
+.imgEvent {
+  height: 100%;
+  width: 100%; }
+
+.imgDet {
+  background-image: url("../img/overhead.jpg"); }
+
+.imgGR {
+  background-image: url("../img/overhead2.jpg");
+  background-position: top center; }
+
+.eventOpt {
+  height: 100%;
+  width: 100%;
+  z-index: 1; }
+
+.contactBtn:hover {
+  color: #ffde12; }
 
 /*------------------------
 --------TEXT CONTENT-------
@@ -561,7 +592,7 @@ h3 {
       width: 100%; } }
 
 .headline::after {
-  background: url("../img/logo.png") no-repeat center;
+  background: url("../img/burger.png") no-repeat center;
   background-size: contain;
   content: "";
   display: block;
@@ -578,20 +609,6 @@ h3 {
   @media only screen and (max-width: 768px) {
     .imgDiv {
       background-attachment: scroll; } }
-
-.imgMiss {
-  background-image: url("../img/mission.jpg"); }
-
-.imgTix {
-  background-image: url("../img/shed5.jpg");
-  background-position: top center; }
-
-@media only screen and (max-width: 768px) {
-  #info, #tickets {
-    padding: 1em; } }
-
-.flowButton {
-  margin: 0; }
 
 /*------------------------
 --------SPONSORS----------
@@ -620,7 +637,7 @@ h3 {
 --------CONTACT----------
 ------------------------*/
 .formDiv {
-  background-color: #5B584F;
+  background-color: #333331;
   min-width: 400px;
   max-width: 400px; }
   @media only screen and (max-width: 768px) {

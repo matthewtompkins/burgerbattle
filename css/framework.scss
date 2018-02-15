@@ -244,24 +244,28 @@
 ------------------------*/
 
 .button {
-  background: $white;
-  border: 2px solid $white;
-  color: $black;
-  font-family: $header;
+  border: 5px solid $white;
   margin: 1em;
-  padding: .25em .618em;
-  text-transform: lowercase;
+  padding: 1em;
+  text-transform: uppercase;
   transition: .3s;
 
     &:hover {
-      background: transparent;
-      color: $white;
+      background: $white;
+      color: $black;
 
         @include responsive(small-screen) {
-          background: $white;
-          color: $black;
+          background: transparent;
+          color: $white;
         }
     }
+}
+
+.buttonBlack {
+  border: 5px solid $black;
+  margin: 1em;
+  padding: 1em;
+  text-transform: uppercase;
 }
 
 /*------------------------
@@ -322,14 +326,17 @@ a {
 
 h1 {
   font-size: 4.326em;
+  line-height: 1em;
 }
 
 h2 {
   font-size: 2.618em;
+  line-height: 1em;
 }
 
 h3 {
   font-size: 1.618em;
+  line-height: 1em;
 }
 
 
@@ -377,16 +384,16 @@ h3 {
   color: $black;
 }
 
-.fontBlue {
-  color: $green;
+.fontPri {
+  color: $primary;
 }
 
-.fontRed {
-  color: $orange;
+.fontSec {
+  color: $secondary;
 }
 
-.fontTan {
-  color: $tan;
+.fontTer {
+  color: $tertiary;
 }
 
 .fontUpper {
@@ -433,16 +440,16 @@ h3 {
   background-color: $black;
 }
 
-.bgBlue {
-  background-color: $green;
+.bgPri {
+  background-color: $primary;
 }
 
-.bgRed {
-  background-color: $orange;
+.bgSec {
+  background-color: $secondary;
 }
 
-.bgTan {
-  background-color: $tan;
+.bgTer {
+  background-color: $tertiary;
 }
 
 /*------------------------
