@@ -54,91 +54,57 @@
         <a href="./detroit.html" class="eventOpt pAbs top left fullWidth"></a>
       </div>
       <div class="eventCont marg2 pad2 fontHead fontWhite fontUpper bold pRel dInBlock alignLeft">
-        <div class="imgEvent imgGR pAbs top left transition3 op0 nrc cover"></div>
-        <h2 class="pRel z1">Grand Rapids</h2>
-        <h3 class="pRel z1">Sat, June 23rd</h3>
-        <h3 class="pRel z1">Fifth Third Ballpark</h3>
-        <h3 class="pRel z1">1p-5p</h3>
-        <p class="pRel z1">More Info</p>
-        <a href="./gr.html" class="eventOpt pAbs top left fullWidth"></a>
-      </div>
-    </div>
+    <div class="fullWidth alignCenter pad2 eventWrapper">
+     <div class="eventCont marg2 pad2 fontHead fontWhite fontUpper bold pRel dInBlock alignLeft">
+       <div class="imgEvent imgDet pAbs top left transition3 op0 nrc cover"></div>
+       <h2 class="pRel z1">Detroit</h2>
+       <h3 class="pRel z1">Sun, June 24th</h3>
+       <h3 class="pRel z1">Shed 5, Eastern Market</h3>
+       <h3 class="pRel z1">1p-4p</h3>
+       <p class="pRel z1">More Info</p>
+       <a href="./detroit.html" class="eventOpt pAbs top left fullWidth"></a>
+     </div>
+     <div class="eventCont marg2 pad2 fontHead fontWhite fontUpper bold pRel dInBlock alignLeft">
+       <div class="imgEvent imgGR pAbs top left transition3 op0 nrc cover"></div>
+       <h2 class="pRel z1">Grand Rapids</h2>
+       <h3 class="pRel z1">Sat, June 23rd</h3>
+       <h3 class="pRel z1">Fifth Third Ballpark</h3>
+       <h3 class="pRel z1">1p-5p</h3>
+       <p class="pRel z1">More Info</p>
+       <a href="./gr.html" class="eventOpt pAbs top left fullWidth"></a>
+     </div>
+   </div>
     <div class="pad4 fullWidth alignCenter">
-      <a href="./contact.html" class="contactBtn font3 fontHead fontUpper fontWhite bold transition3">[Contact Us]</a>
+      <a href="./contact.html" class="contactBtn font3 fontHead fontUpper fontWhite bold">[Contact Us]</a>
     </div>
     <footer class="pad2 alignCenter">
       <p class="fontBody font6 fontWhite">Copyright (c) 2018 Burger Battle All Rights Reserved.</p>
-      <p class="fontBody font6 fontWhite">Website design by <a class="fontSec" href="http://mtdesign.io">Matt Tompkins</a></p>
-      <p class="fontBody font6 fontWhite">Icons courtesy of Maria Maldonado.</p>
+      <p class="fontBody font6 fontWhite">Website design by <a class="fontSec" href="http://mtdesign.io">Matt Tompkins.</a></p>
       <p class="fontBody font6 fontWhite">Photos courtsey of .</p>
     </footer>
   </section>
   <script>
 
-    window.addEventListener("scroll", function() {
+  hamburger.addEventListener("click", function() {
 
+    mMenu.style.display = "flex";
 
-      var winTop = window.pageYOffset;
-      var winHeight = window.innerHeight;
-      var winWidth = window.innerWidth;
-      var mobile = 760;
+    setTimeout( function() {
 
-      var hamburger = document.getElementById("hamburger");
+      mMenu.style.left = "0px";
+      menuClose.addEventListener("click", closeMenu);
+    },10);
+  });
 
-      var nav = document.getElementById("nav");
-      var navOption = document.getElementsByClassName("navOption");
+  function closeMenu() {
 
-      if ( winWidth <= mobile ) {
+    mMenu.style.left = "100%";
 
-      } else {
+    setTimeout( function() {
 
-        if ( winTop > ( winHeight / 10 )  ) {
-
-          //nav.style.backgroundColor = "#F9FAF9";
-          //hamburger.classList.add("hamBlack");
-
-          for ( i = 0; i < navOption.length; i++ ) {
-
-            navOption[i].style.opacity = "1";
-          }
-
-        } else {
-
-          //nav.style.backgroundColor = "transparent";
-          //hamburger.classList.remove("hamBlack");
-
-          for ( i = 0; i < navOption.length; i++ ) {
-
-            navOption[i].style.opacity = "0";
-          }
-        }
-      }
-
-
-    });
-
-    var mMenu = document.getElementById("mMenu");
-    var menuClose = document.getElementById("menuClose");
-
-    hamburger.addEventListener("click", function() {
-
-      mMenu.style.display = "flex";
-      setTimeout( function() {
-
-        mMenu.style.left = "0px";
-        menuClose.addEventListener("click", closeMenu);
-  },10);
-});
-
-function closeMenu() {
-
-  mMenu.style.left = "100%";
-
-  setTimeout( function() {
-
-      mMenu.style.display = "none";
-    }, 600);
-}
+        mMenu.style.display = "none";
+      }, 600);
+  }
   </script>
 </body>
 </html>

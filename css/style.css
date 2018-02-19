@@ -239,8 +239,7 @@ table {
   border: 5px solid #F9FAF9;
   margin: 1em;
   padding: 1em;
-  text-transform: uppercase;
-  transition: .3s; }
+  text-transform: uppercase; }
   .button:hover {
     background: #F9FAF9;
     color: #333331; }
@@ -333,10 +332,10 @@ h3 {
   font-size: .5em; }
 
 .fontHead {
-  font-family: "Archivo Black", sans-serif; }
+  font-family: "Archivo Black", Futura, sans-serif; }
 
 .fontBody {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", Verdana, sans-serif; }
 
 .fontWhite {
   color: #F9FAF9; }
@@ -440,6 +439,12 @@ h3 {
 .transition9 {
   transition: .9s; }
 
+html {
+  font-size: 1em; }
+  @media only screen and (max-width: 768px) {
+    html {
+      font-size: .8em; } }
+
 /*------------------------
 --------NAV MENU----------
 ------------------------*/
@@ -465,8 +470,10 @@ h3 {
     display: block; } }
 
 .mLogo {
-  height: 6em;
-  width: 6em; }
+  height: 100px;
+  min-height: 100px;
+  min-width: 100px;
+  width: 100px; }
 
 #mMenu {
   flex-direction: column;
@@ -517,6 +524,9 @@ h3 {
     transform: scaleX(1); }
   #hamburger:hover::after {
     bottom: 5px; }
+  @media only screen and (max-width: 768px) {
+    #hamburger {
+      display: inline-block; } }
 
 .hamBlack::before, .hamBlack::after {
   background-color: #333331 !important; }
@@ -553,6 +563,10 @@ h3 {
     #info h1 {
       font-size: 2.618em; } }
 
+@media only screen and (max-width: 768px) {
+  .eventWrapper {
+    padding: 0; } }
+
 .eventCont {
   border: 1em solid #F9FAF9; }
   .eventCont:hover {
@@ -561,6 +575,16 @@ h3 {
       color: #333331; }
     .eventCont:hover .imgEvent {
       opacity: 1; }
+  @media only screen and (max-width: 768px) {
+    .eventCont {
+      border: 1em solid #333331;
+      margin: 1em 0; }
+      .eventCont:last-child {
+        margin-bottom: 0; }
+      .eventCont h1, .eventCont h2, .eventCont h3, .eventCont p {
+        color: #333331; }
+      .eventCont .imgEvent {
+        opacity: 1; } }
 
 .imgEvent {
   height: 100%;
@@ -579,21 +603,14 @@ h3 {
   z-index: 1; }
 
 .contactBtn:hover {
-  color: #ffde12; }
+  color: #FFAB00; }
 
 /*------------------------
 --------TEXT CONTENT-------
 ------------------------*/
 .contTxt {
-  border: 2px solid #F9FAF9;
   max-width: 500px;
-  padding: 2em; }
-  @media only screen and (max-width: 768px) {
-    .contTxt {
-      min-width: 100%;
-      padding: 1em;
-      text-align: center;
-      width: 100%; } }
+  padding-top: 100px; }
 
 .headline::after {
   background: url("../img/burger.png") no-repeat center;
@@ -638,26 +655,124 @@ h3 {
     padding: 0; } }
 
 /*------------------------
+--------EVENTPAGE---------
+------------------------*/
+.eventHero {
+  background-attachment: fixed;
+  background-image: url("../img/eventHero.png");
+  background-position: right center;
+  min-height: 100vh; }
+  @media only screen and (max-width: 768px) {
+    .eventHero {
+      background-position: left center; } }
+
+.eventHeroGR {
+  background-attachment: fixed;
+  background-image: url("../img/eventHeroGR.png");
+  background-position: right center;
+  min-height: 100vh; }
+  @media only screen and (max-width: 768px) {
+    .eventHeroGR {
+      background-position: left center; } }
+
+#heroFade {
+  background-image: linear-gradient(to right, rgba(10, 10, 10, 0.8) 0%, transparent 40%);
+  height: 100%; }
+  @media only screen and (max-width: 768px) {
+    #heroFade {
+      background-image: linear-gradient(to right, rgba(10, 10, 10, 0.8) 0%, transparent 90%); } }
+
+#evTitle {
+  background-color: rgba(10, 10, 10, 0); }
+  @media only screen and (max-width: 768px) {
+    #evTitle {
+      display: none; } }
+
+.evInfo {
+  min-height: 100vh; }
+
+.sideNav {
+  flex-direction: column; }
+  @media only screen and (max-width: 768px) {
+    .sideNav {
+      position: absolute;
+      width: 100%; } }
+
+.evOpt {
+  margin-bottom: 1.618em; }
+  .evOpt:hover a {
+    color: #FFAB00; }
+  .evOpt:last-child {
+    margin-bottom: 0; }
+  @media only screen and (max-width: 768px) {
+    .evOpt {
+      margin-bottom: 1em;
+      text-align: center; }
+      .evOpt:first-child {
+        background-color: rgba(10, 10, 10, 0.8);
+        display: block; } }
+
+@media only screen and (max-width: 768px) {
+  .evLocat {
+    padding: 0; } }
+
+#map {
+  height: 400px;
+  max-width: 100%;
+  width: 400px; }
+
+.buy:hover {
+  color: #F9FAF9; }
+
+.tix {
+  background-image: url("../img/tix.png");
+  height: 40px;
+  width: 40px; }
+
+/*------------------------
 --------CONTACT----------
 ------------------------*/
+.bgLogo {
+  background-image: url("../img/logo.png");
+  height: 100vh;
+  width: 100vw; }
+  @media only screen and (max-width: 768px) {
+    .bgLogo {
+      display: none; } }
+
+.contactWrapper {
+  background-image: linear-gradient(to right, #ec2227 0%, #ffde12 100%); }
+  @media only screen and (max-width: 768px) {
+    .contactWrapper .sideNav {
+      display: none; } }
+
+.contact {
+  min-height: 100vh; }
+
 .formDiv {
-  background-color: #333331;
-  min-width: 400px;
-  max-width: 400px; }
+  background-color: transparent;
+  min-width: 500px;
+  max-width: 500px; }
   @media only screen and (max-width: 768px) {
     .formDiv {
       min-width: 100%;
-      padding: 1em;
-      width: 100%; } }
+      width: 100%; }
+      .formDiv h2 {
+        color: #F9FAF9;
+        font-size: 2em; } }
 
 label {
   padding-left: 8px; }
+  @media only screen and (max-width: 768px) {
+    label {
+      font-size: .8em; } }
 
 .volInput {
-  background-color: rgba(253, 253, 253, 0.2);
+  background-color: rgba(253, 253, 253, 0.4);
   border: none;
   color: #F9FAF9;
   display: block;
+  font-family: "Open Sans", Verdana, sans-serif;
   line-height: 2.618em;
   padding-left: 8px;
   outline: none;
@@ -669,13 +784,34 @@ label {
   overflow: scroll;
   resize: none; }
 
+input[type="radio"] {
+  border: 4px solid #F9FAF9;
+  height: 20px;
+  margin: 0;
+  position: relative;
+  top: 4px;
+  -webkit-appearance: none;
+  width: 20px; }
+  input[type="radio"]:checked {
+    background-color: #F9FAF9; }
+  input[type="radio"]:focus {
+    box-shadow: none;
+    outline: none; }
+
 input[type="submit"] {
   appearance: none;
+  background-color: transparent;
+  border: 5px solid #F9FAF9;
   cursor: pointer;
   font-size: 1em;
-  margin: 1em;
+  margin-left: 0;
   -moz-appearance: none;
   outline: none;
   -webkit-appearance: none; }
+  input[type="submit"]:hover {
+    color: #ec2227; }
+    @media only screen and (max-width: 768px) {
+      input[type="submit"]:hover {
+        color: #F9FAF9; } }
 
 /*# sourceMappingURL=style.css.map */

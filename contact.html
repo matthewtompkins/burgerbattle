@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Burger Battle - Detroit</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Burger Battle - Detroit">
+  <meta name="author" content="Matt Tompkins">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Burger Battle - Detroit">
+  <meta property="og:image" content="./img/logo.png">
+  <meta property="og:site_name" content="Burger Battle - Detroit">
+  <meta property="og:description" content="Burger Battle - Detroit">
+  <meta property="og:url" content="http://www.theburgerbattle.com">
+  <link rel="shortcut icon" href="./img/logo.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Open+Sans" rel="stylesheet">
+</head>
+<body>
+  <header class="fullWidth topNav pFix top left z5 transition3 pad2 alignRight" id="nav">
+    <div id="hamburger" class="dNone pRel"></div>
+  </header>
+  <div class="pad2 pFix top z5 dNone transition6 flexCenter bgWhite" id="mMenu">
+    <h3 id="menuClose" class="fontBody fontBlack pAbs top right marg2">x</h3>
+    <ul class="mOptions fontHead fontBlack fontUpper alignCenter font5">
+      <li><a class="mOption" href="./index.html">Home</a></li>
+      <li><a class="mOption" href="./detroit.html">Detroit</a></li>
+      <li><a class="mOption" href="./gr.html">Grand Rapids</a></li>
+    </ul>
+  </div>
+  <section class="contactWrapper fullWidth z3">
+    <div class="fullWidth pAbs fullHeight top left op2 bgLogo nrc contain"></div>
+    <ul class="sideNav pFix top right dFlex fullHeight flexCenter pad2 z5">
+      <li class="evOpt fullWidth alignRight"><a href="./index.html" class="fontHead fontWhite bold fontLower">Home</a></li>
+      <li class="evOpt fullWidth alignRight"><a href="./detroit.html" class="fontHead fontWhite bold fontLower">Detroit</a></li>
+      <li class="evOpt fullWidth alignRight"><a href="./gr.html" class="fontHead fontWhite bold fontLower">Grand Rapids</a></li>
+    </ul>
+    <section class="contact fullWidth">
+      <div class="pAbs fullHeight top left dFlex flexCenter pad2">
+        <div class="formDiv alignLeft">
+          <h2 class="fontUpper fontHead fontTer bold">Contact Us</h2>
+          <form action="https://formspree.io/email@dinedrinkdetroit.com" class="alignLeft bold" method="POST">
+            <label class="fontHead fontUpper fontTer">I am a...</label>
+            <label class="fontHead fontUpper fontWhite" for="rVol">Volunteer</label>
+            <input type="radio" value="volunteer" name="interest" id="rVol" checked>
+            <label class="fontHead fontUpper fontWhite" for="rMerc">Vendor</label>
+            <input type="radio" value="merchant" name="interest" id="rMerc">
+            <label class="fontHead fontUpper fontWhite" for="rRest">Restaurant</label>
+            <input type="radio" value="restaurant" name="interest" id="rRest">
+            <div>
+              <label class="fontHead fontUpper fontTer">Or...</label>
+              <label class="fontHead fontUpper fontWhite" for="rGen">I have a general question</label>
+              <input type="radio" value="general" name="interest" id="rGen">
+            </div>
+            <label class="fontHead fontUpper fontTer dBlock">Name</label>
+            <input class="volInput" name="Name">
+            <label class="fontHead fontUpper fontTer">E-mail</label>
+            <input class="volInput" name="Email">
+            <label class="fontHead fontUpper fontTer">Message (optional)</label>
+            <textarea class="volInput volArea" name="Message"></textarea>
+            <div class="fullWidth">
+              <input type="submit" class="button bold fontHead fontWhite" value="Send">
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="pad2 alignCenter pRel z4">
+      <div class="logo contain nrc auto"><a href="./index.html" class="inLink dBlock"></a></div>
+      <div class="pad2 fullWidth alignCenter">
+        <p class="fontBody font6 fontWhite">Copyright (c) 2018 Burger Battle All Rights Reserved.</p>
+        <p class="fontBody font6 fontWhite">Website design by <a class="fontTer" href="http://mtdesign.io">Matt Tompkins.</a></p>
+        <p class="fontBody font6 fontWhite">Photos courtsey of .</p>
+      </div>
+    </footer>
+  </section>
+  <script>
+  hamburger.addEventListener("click", function() {
+
+    mMenu.style.display = "flex";
+
+    setTimeout( function() {
+
+      mMenu.style.left = "0px";
+      menuClose.addEventListener("click", closeMenu);
+    },10);
+  });
+
+  function closeMenu() {
+
+    mMenu.style.left = "100%";
+
+    setTimeout( function() {
+
+        mMenu.style.display = "none";
+      }, 600);
+  }
+  </script>
+</body>
+</html>
