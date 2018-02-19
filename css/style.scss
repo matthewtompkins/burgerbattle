@@ -488,6 +488,10 @@ input[type="radio"] {
       box-shadow: none;
       outline: none;
     }
+
+    @include responsive(small-screen) {
+      top: 6px;
+    }
 }
 
 input[type="submit"] {

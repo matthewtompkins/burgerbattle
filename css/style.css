@@ -797,6 +797,9 @@ input[type="radio"] {
   input[type="radio"]:focus {
     box-shadow: none;
     outline: none; }
+  @media only screen and (max-width: 768px) {
+    input[type="radio"] {
+      top: 6px; } }
 
 input[type="submit"] {
   appearance: none;
