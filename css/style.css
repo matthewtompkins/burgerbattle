@@ -546,7 +546,7 @@ html {
 ------------------------*/
 .hero {
   background-attachment: fixed;
-  background-image: url("../img/hero.png");
+  background-image: url("../img/hero.jpg");
   background-position: bottom center;
   flex-direction: column;
   min-height: 100vh; }
@@ -634,6 +634,9 @@ html {
 /*------------------------
 --------SPONSORS----------
 ------------------------*/
+#dSpon {
+  padding-top: 100px; }
+
 .sponsorDiv {
   flex-wrap: wrap; }
 
