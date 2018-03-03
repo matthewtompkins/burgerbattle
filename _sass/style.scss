@@ -297,6 +297,10 @@ html {
   background-image: url("../img/faygo.png");
 }
 
+#nee {
+  background-image: url("../img/nee.png");
+}
+
 #volunteer {
 
     @include responsive(small-screen) {
