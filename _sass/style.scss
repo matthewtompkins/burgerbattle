@@ -275,6 +275,11 @@ html {
 
 .sponsorDiv {
   flex-wrap: wrap;
+  max-width: 66vw;
+
+    @include responsive(small-screen) {
+      max-width: 100%;
+    }
 }
 
 .sponsor {
@@ -299,6 +304,74 @@ html {
 
 #nee {
   background-image: url("../img/nee.png");
+}
+
+#frita {
+  background-image: url("../img/frita.png");
+}
+
+#hipoint {
+  background-image: url("../img/hipoint.png");
+}
+
+#atwater {
+  background-image: url("../img/atwater.jpg");
+}
+
+#exodos {
+  background-image: url("../img/exodos.jpg");
+}
+
+#brome {
+  background-image: url("../img/brome.jpg");
+}
+
+#oak {
+  background-image: url("../img/oak.png");
+}
+
+#ink {
+  background-image: url("../img/ink.png");
+}
+
+#fire {
+  background-image: url("../img/fire.jpg");
+}
+
+#social {
+  background-image: url("../img/social.jpg");
+}
+
+#lovers {
+  background-image: url("../img/lovers.jpg");
+}
+
+#second {
+  background-image: url("../img/second.png");
+}
+
+#players {
+  background-image: url("../img/players.jpg");
+}
+
+#legends {
+  background-image: url("../img/legends.png");
+}
+
+#crow {
+  background-image: url("../img/crow.png");
+}
+
+#town {
+  background-image: url("../img/town.png");
+}
+
+#axle {
+  background-image: url("../img/axle.png");
+}
+
+#river {
+  background-image: url("../img/river.png");
 }
 
 #volunteer {
