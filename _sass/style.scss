@@ -386,9 +386,10 @@ html {
 ------------------------*/
 
 .eventHero {
-  background-image: url("../img/eventHero.png");
+  background-image: url("../img/eventHero.jpg");
   background-position: right center;
   min-height: 100vh;
+  transform: scaleX(-1);
 
     @include responsive(small-screen) {
       background-position: left center;
