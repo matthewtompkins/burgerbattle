@@ -274,7 +274,6 @@ html {
 }
 
 .sponsorDiv {
-  flex-wrap: wrap;
   max-width: 66vw;
 
     @include responsive(small-screen) {
@@ -379,6 +378,76 @@ html {
     @include responsive(small-screen) {
       padding: 0;
     };
+}
+
+.gallery {
+  max-width: 78vw;
+
+    @include responsive(small-screen) {
+      max-width: 100%;
+      text-align: center;
+    }
+}
+
+.photo {
+  box-shadow: 0 0 4px rgba(10,10,10,.4);
+  height: calc(26vw - 6em);
+  min-height: 120px;
+  min-width: 120px;
+  width: calc(26vw - 6em);
+
+    @include responsive(small-screen) {
+      height: 20vw;
+      width: 20vw;
+    }
+}
+
+#p1 {
+  background-image: url("../img/p1.jpg");
+}
+
+#p2 {
+  background-image: url("../img/p2.jpg");
+}
+
+#p3 {
+  background-image: url("../img/p3.jpg");
+}
+
+#p4 {
+  background-image: url("../img/p4.jpg");
+}
+
+#p5 {
+  background-image: url("../img/p5.jpg");
+}
+
+#p6 {
+  background-image: url("../img/p6.jpg");
+}
+
+#p7 {
+  background-image: url("../img/p7.jpg");
+}
+
+#p8 {
+  background-image: url("../img/p8.jpg");
+}
+
+#p9 {
+  background-image: url("../img/p9.jpg");
+}
+
+#p10 {
+  background-image: url("../img/p10.jpg");
+}
+
+#p11 {
+  background-image: url("../img/p11.jpg");
+}
+
+#p12 {
+  background-image: url("../img/p12.jpg");
 }
 
 /*------------------------
