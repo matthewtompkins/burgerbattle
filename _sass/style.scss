@@ -392,6 +392,8 @@ html {
 .photo {
   box-shadow: 0 0 4px rgba(10,10,10,.4);
   height: calc(26vw - 6em);
+  max-height: 240px;
+  max-width: 240px;
   min-height: 120px;
   min-width: 120px;
   width: calc(26vw - 6em);
