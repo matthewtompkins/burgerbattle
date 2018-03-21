@@ -245,6 +245,10 @@ html {
 .contTxt {
   max-width: 500px;
   padding-top: 100px;
+
+    @include responsive(xl-screen) {
+      margin: auto;
+    }
 }
 
 .headline {
@@ -278,6 +282,10 @@ html {
 
     @include responsive(small-screen) {
       max-width: 100%;
+    }
+
+    @include responsive(xl-screen) {
+      margin: auto;
     }
 }
 
@@ -385,6 +393,11 @@ html {
 
     @include responsive(small-screen) {
       max-width: 100%;
+      text-align: center;
+    }
+
+    @include responsive(xl-screen) {
+      margin: auto;
       text-align: center;
     }
 }
@@ -497,6 +510,10 @@ html {
 
 .evInfo {
   min-height: 100vh;
+
+    @include responsive(xl-screen) {
+      text-align: center;
+    }
 }
 
 .sideNav {
