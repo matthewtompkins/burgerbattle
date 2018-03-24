@@ -381,6 +381,30 @@ html {
   background-image: url("../img/river.png");
 }
 
+#first {
+  background-image: url("../img/first.png");
+}
+
+#aqua {
+  background-image: url("../img/aqua.png");
+}
+
+#lis {
+  background-image: url("../img/lis.jpg");
+}
+
+#dmfg {
+  background-image: url("../img/dmfg.png");
+}
+
+#beyond {
+  background-image: url("../img/beyond.png");
+}
+
+#water {
+  background-image: url("../img/water.png");
+}
+
 #volunteer {
 
     @include responsive(small-screen) {
