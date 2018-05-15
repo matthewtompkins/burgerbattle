@@ -421,6 +421,18 @@ html {
   background-image: url("../img/budweiser.png");
 }
 
+#girls {
+  background-image: url("../img/girls.jpg");
+}
+
+#dcc {
+  background-image: url("../img/dcc.png");
+}
+
+#pruitts {
+  background-image: url("../img/pruitts.png");
+}
+
 #volunteer {
 
     @include responsive(small-screen) {
