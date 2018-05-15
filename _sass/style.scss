@@ -405,6 +405,22 @@ html {
   background-image: url("../img/water.png");
 }
 
+#delBen {
+  background-image: url("../img/delBen.png");
+}
+
+#mikes {
+  background-image: url("../img/mikes.jpg");
+}
+
+#barefoot {
+  background-image: url("../img/barefoot.png");
+}
+
+#budweiser {
+  background-image: url("../img/budweiser.png");
+}
+
 #volunteer {
 
     @include responsive(small-screen) {
