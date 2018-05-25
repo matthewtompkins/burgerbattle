@@ -433,6 +433,10 @@ html {
   background-image: url("../img/pruitts.png");
 }
 
+#american {
+  background-image: url("../img/greektown.png");
+}
+
 #volunteer {
 
     @include responsive(small-screen) {
