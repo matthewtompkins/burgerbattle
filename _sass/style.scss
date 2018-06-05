@@ -173,6 +173,10 @@ html {
     @include responsive(small-screen) {
       padding: 0;
     }
+
+    @include responsive(small-screen) {
+      display: block;
+    }
 }
 
 .eventCont {
@@ -217,12 +221,20 @@ html {
   background-image: url("../img/overheadNew.jpg");
   background-position: left center;
   background-size: 200%;
+
+  @include responsive(small-screen) {
+    background-size: 400%;
+  }
 }
 
 .imgGR {
   background-image: url("../img/overheadNew.jpg");
   background-position: right center;
   background-size: 200%;
+
+  @include responsive(small-screen) {
+    background-size: 400%;
+  }
 }
 
 .eventOpt {
