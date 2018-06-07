@@ -449,6 +449,19 @@ html {
   background-image: url("../img/greektown.png");
 }
 
+#hornitos {
+  background-image: url("../img/hornitos.png");
+}
+
+#makers {
+  background-image: url("../img/makers.png");
+}
+
+#steam {
+  background-image: url("../img/steam.jpg");
+}
+
+
 #volunteer {
 
     @include responsive(small-screen) {
